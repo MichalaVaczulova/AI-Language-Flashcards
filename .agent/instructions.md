@@ -5,13 +5,13 @@
 Prepare digital flashcards for **FlashcardsLearnGermanKids** in **Obsidian** using the **AOSR (Another Obsidian Spaced Repetition)** plugin.
 
 The cards work with sentences and context — not just isolated words.
-**Pictures are always the foundation** — a visual anchor for memorisation.
+**Pictures are always the foundation** — a visual anchor for memorization.
 
 **Source language: English → German**
 
 ---
 
-## 📁 Štruktúra vaultu
+## 📁 Vault Structure
 
 ```
 FlashcardsLearnGermanKids/
@@ -26,15 +26,15 @@ FlashcardsLearnGermanKids/
 
 ---
 
-## 🃏 TYP 1: Nemecká slovná zásoba (`#germanVocabulary`)
+## 🃏 TYPE 1: German Vocabulary (`#germanVocabulary`)
 
-### Popis
+### Description
 
-Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené do jednoduchej, zaujímavej vety.
+Flashcards for learning German words in the context of sentences. Each word is embedded in a simple, engaging sentence.
 
 ---
 
-### Pravidlá tvorby kartičiek
+### Flashcard Creation Rules
 
 #### ▶ Front of card (question)
 - **Short, simple English sentence** — max 1 sentence, no subordinate clauses!
@@ -50,19 +50,19 @@ Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené
   - Filename: `word_YYYYMMDD.png` — e.g. `kopf_20260225.png`
   - Embed using Obsidian syntax **without path**: `![[kopf_20260225.png]]`
 
-#### ▶ Zadná strana kartičky (odpoveď)
-- **Člen** (rod): `der` / `die` / `das` — tučný, zvýraznený
-- **Nemecký preklad kľúčového slova** — rozdelený na slabiky s **striedaním farieb** (modrá 🔵 a červená 🔴)
-- **Nemecká veta** — preklad celej vety z prednej strany (kurzívou)
-  - Nové nemecké slovo zvýrazniť červenou `#e53935`: `<span style="color:#e53935">Kopf</span>`
-- **Audio výslovnosť celej nemeckej vety** (MP3) — vložiť pomocou `![[slovo_timestamp.mp3]]`
-  - Generovať pomocou inline Python skriptu:
+#### ▶ Back of card (answer)
+- **Article** (gender): `der` / `die` / `das` — bold, highlighted
+- **German translation of the key word** — split into syllables with **alternating colours** (blue 🔵 and red 🔴)
+- **German sentence** — translation of the whole sentence from the front side (in italics)
+  - Highlight the new German word in red `#e53935`: `<span style="color:#e53935">Kopf</span>`
+- **Audio pronunciation of the whole German sentence** (MP3) — embedded via `![[word_timestamp.mp3]]`
+  - Generate using the inline Python script:
     ```bash
-    python3 -c "from gtts import gTTS; import os; from datetime import datetime; ts=datetime.now().strftime('%Y%m%d%H%M%S'); out='audio/de/NAME_OF_DECK'; os.makedirs(out, exist_ok=True); tts=gTTS('VETA_PO_NEMECKY', lang='de'); tts.save(f'{out}/slovo_{ts}.mp3'); print(f'{out}/slovo_{ts}.mp3')"
+    python3 -c "from gtts import gTTS; import os; from datetime import datetime; ts=datetime.now().strftime('%Y%m%d%H%M%S'); out='audio/de/NAME_OF_DECK'; os.makedirs(out, exist_ok=True); tts=gTTS('GERMAN_SENTENCE', lang='de'); tts.save(f'{out}/word_{ts}.mp3'); print(f'{out}/word_{ts}.mp3')"
     ```
-  - Uložiť do priečinka `audio/de/NAME_OF_DECK/`
+  - Save to the folder `audio/de/NAME_OF_DECK/`
 
-#### ▶ Farebné schéma — prehľad
+#### ▶ Colour Scheme Overview
 
 | Where | What | Colour |
 |-------|------|--------|
@@ -73,12 +73,12 @@ Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené
 
 ---
 
-### Šablóna kartičky — Veta (AOSR formát)
+### Card Template — Sentence (AOSR format)
 
-> **Pravidlá oddeľovania kartičiek:**
-> - `#Q #germanVocabulary` sa píše **len raz** — na úplnom začiatku `.md` súboru
-> - Kartičky sa oddeľujú pomocou `***` — **bez prázdnych riadkov** pred ani za
-> - Nová kartička začína **hneď na riadku pod `***`**
+> **Rules for separating cards:**
+> - `#Q #germanVocabulary` is written **only once** — at the very beginning of the `.md` file
+> - Cards are separated by `***` — **without empty lines** before or after
+> - A new card starts **immediately on the line below `***`**
 
 ```markdown
 #Q #germanVocabulary
@@ -103,61 +103,61 @@ Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené
 
 ---
 
-## 🃏 TYP 2: Otázka & Vysvetlenie (`#robkoLearn`)
+## 🃏 TYPE 2: Question & Explanation (`#robkoLearn`)
 
-### Popis
+### Description
 
-Kartičky pre širší obsah — história, príroda, zaujímavosti. Predná strana je otázka + obrázok, zadná strana je vysvetlenie, prípadne doplnkový diagram alebo mapa.
-
----
-
-### Pravidlá tvorby kartičiek
-
-#### ▶ Predná strana kartičky (otázka)
-- **Otázka** — jednoduchá, konkrétna, zaujímavá pre 8-ročného chlapca
-  - Príklad: *„Prečo dinosaury vyhynuli?"*
-- **Obrázok** — ilustrácia témy (cartoon, realistický, diagram)
-
-#### ▶ Zadná strana kartičky (odpoveď)
-- **Krátke vysvetlenie** — 2–4 vety, jasné a zrozumiteľné
-- *Voliteľne:* doplnkový obrázok, diagram, mapa alebo tabuľka
+Cards for broader content — history, nature, interesting facts. The front side is a question + image, the back side is an explanation, and optionally an additional diagram or map.
 
 ---
 
-### Šablóna kartičky — Otázka & Vysvetlenie (AOSR formát)
+### Flashcard Creation Rules
+
+#### ▶ Front of card (question)
+- **Question** — simple, specific, interesting for an 8-year-old boy
+  - Example: *"Why did the dinosaurs go extinct?"*
+- **Image** — illustration of the topic (cartoon, realistic, diagram)
+
+#### ▶ Back of card (answer)
+- **Short explanation** — 2–4 sentences, clear and easy to understand
+- *Optional:* additional image, diagram, map, or table
+
+---
+
+### Card Template — Question & Explanation (AOSR format)
 
 ```markdown
 #Q #robkoLearn
-Prečo dinosaury vyhynuli?
+Why did the dinosaurs go extinct?
 ![[dinosaur_20260224.png]]
 ?
-Pred 66 miliónmi rokov padol na Zem obrovský meteor. Zdvihol mrak prachu, ktorý zablokoval slnko. Rastliny uhynuli a dinosaury nemali čo jesť.
+Around 66 million years ago, a huge meteor hit the Earth. It raised a dust cloud that blocked the sun. The plants died and the dinosaurs had nothing to eat.
 ![[dinosaur_impact_diagram_20260224.png]]
 ***
-Ako dlho trvá, kým sa svetlo zo Slnka dostane na Zem?
+How long does it take for light from the Sun to reach Earth?
 ![[sun_earth_20260224.png]]
 ?
-Svetlo cestuje rýchlosťou 300 000 km/s. Vzdialenosť Zem–Slnko je asi 150 miliónov km. Trvá to približne **8 minút**.
+Light travels at a speed of 300,000 km/s. The distance between the Earth and the Sun is about 150 million km. It takes approximately **8 minutes**.
 ![[light_speed_diagram_20260224.png]]
 ```
 
 ---
 
-## 🖼️ Štýl obrázkov
+## 🖼️ Image Style
 
-- **Predná strana:** Pixar / Disney / cartoon — akčné, farebné, vhodné pre chlapca
-- **Zadná strana (diagram):** schematický obrázok, mapa, tabuľka — jasný a prehľadný
-- **Pozadie:** jednoduché alebo biele — bez rozptyľovania
-- **Veľkosť:** **512×512 px** — povinné! Väčšie obrázky sa nezmestia na display tabletu a AOSR tlačítka sú skryté za scrollom
-  - Pri generovaní zadávať prompt s `512x512`
-  - Existujúce väčšie obrázky zmenšiť: `sips -z 512 512 nazov.png --out nazov.png`
-- **Formát:** `.png`
-- **Pomenovanie súborov:** malé písmená, bez diakritiky, podčiarkovník pred dátumom
-  - Príklad: `kopf_20260225.png`, `kralle_20260225.png`
+- **Front side:** Pixar / Disney / cartoon — action-oriented, colourful, suitable for a boy
+- **Back side (diagram):** schematic image, map, table — clear and uncluttered
+- **Background:** simple or white — no distractions
+- **Size:** **512×512 px** — mandatory! Larger images won't fit on the tablet display and AOSR buttons will be hidden behind scaling
+  - When generating, provide the prompt with `512x512`
+  - Shrink existing larger images: `sips -z 512 512 name.png --out name.png`
+- **Format:** `.png`
+- **File naming:** lowercase letters, no diacritics, underscore before the date
+  - Example: `kopf_20260225.png`, `kralle_20260225.png`
 
 ---
 
-## 📝 Pracovný postup pri tvorbe novej kartičky
+## 📝 Workflow for creating a new card
 
 ### German vocabulary card (Type 1)
 1. **Choose a word** (e.g. `der Hund`)
@@ -170,34 +170,34 @@ Svetlo cestuje rýchlosťou 300 000 km/s. Vzdialenosť Zem–Slnko je asi 150 mi
 8. **Generate German audio**: `python3 .agent/generate_audio_de.py --deck deck_name "der Hund"`
 9. **Create the card** using the Type 1 template
 
-### Otázka & Vysvetlenie (Typ 2)
-1. **Vymysli zaujímavú otázku** pre 8-ročného chlapca
-2. **Vygeneruj obrázok** k téme
-3. **Napíš krátke vysvetlenie** (2–4 vety)
-4. *Voliteľne:* vygeneruj diagram alebo mapu pre zadnú stranu
-5. **Vytvor kartičku** podľa šablóny Typ 2
+### Question & Explanation (Type 2)
+1. **Think of an interesting question** for an 8-year-old boy
+2. **Generate an image** related to the topic
+3. **Write a short explanation** (2–4 sentences)
+4. *Optional:* generate a diagram or map for the back side
+5. **Create the card** following the Type 2 template
 
 ---
 
-## 🏷️ Tagy a organizácia
+## 🏷️ Tags and Organization
 
-| Tag | Popis |
-|-----|-------|
-| `#germanVocabulary` | Nemecká slovná zásoba s vetami |
-| `#robkoLearn` | Otázky a vysvetlenia (príroda, história, zaujímavosti) |
-| `#Q` | Povinný AOSR tag — začiatok balíka otázok |
-| `?` | Povinný oddeľovač odpovede (default AOSR) |
-
----
-
-## 🚀 Plánované typy kartičiek (budúcnosť)
-
-- [ ] `#germanVocabulary` — nemecká slovná zásoba (aktívny)
-- [ ] `#robkoLearn` — zaujímavosti, príroda, história
-- [ ] `#mathBasics` — matematika (násobilka, zlomky, ...)
-- [ ] `#geography` — krajiny, hlavné mestá, rieky
-- [ ] `#science` — veda a technika
+| Tag | Description |
+|-----|-------------|
+| `#germanVocabulary` | German vocabulary with sentences |
+| `#robkoLearn` | Questions and explanations (nature, history, fun facts) |
+| `#Q` | Mandatory AOSR tag — start of a question deck |
+| `?` | Mandatory answer separator (default AOSR) |
 
 ---
 
-*Instructions created: February 2026 | Updated March 2026 — language changed to English → German 🚀*
+## 🚀 Planned Card Types (Future)
+
+- [ ] `#germanVocabulary` — German vocabulary (active)
+- [ ] `#robkoLearn` — fun facts, nature, history
+- [ ] `#mathBasics` — mathematics (multiplication tables, fractions, ...)
+- [ ] `#geography` — countries, capital cities, rivers
+- [ ] `#science` — science and technology
+
+---
+
+*Instructions created: February 2026 | Updated March 2026 — translated to English 🚀*
