@@ -2,6 +2,10 @@
 
 > **Obsidian flashcards for children learning German — powered by spaced repetition.**
 
+<p align="center">
+  <img src="pictures/cover.jpg" width="600" alt="Flashcards on iPad"/>
+</p>
+
 A ready-to-use Obsidian vault with illustrated German vocabulary flashcards for kids. Cards appear automatically at the right time thanks to the **AOSR** (Another Obsidian Spaced Repetition) plugin, so even 10 minutes a day adds up to solid vocabulary gains.
 
 ---
