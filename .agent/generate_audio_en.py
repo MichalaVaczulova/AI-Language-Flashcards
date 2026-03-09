@@ -71,17 +71,24 @@ def generate_mp3(text: str, output_dir: str = OUTPUT_DIR) -> str:
     return filename
 
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python3 generate_audio_en.py <sentence1> [sentence2] ...")
-        print('Example:  python3 generate_audio_en.py "T-Rex has a sharp tooth."')
-        sys.exit(1)
+import argparse
 
-    sentences: list[str] = list(sys.argv[1:])
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="MP3 pronunciation generator for EN")
+    parser.add_argument("--deck", type=str, default="", help="Subfolder name for the deck (e.g. germanVocabulary_01_dino)")
+    parser.add_argument("sentences", nargs="+", help="Sentences to read aloud")
+    
+    args = parser.parse_args()
+    
+    sentences = args.sentences
+    deck_folder = args.deck
+
+    out_dir = os.path.join(OUTPUT_DIR, deck_folder) if deck_folder else OUTPUT_DIR
+
     print(f"🎙️  Generating audio for {len(sentences)} sentence(s) (language: {LANGUAGE})")
-    print(f"📁  Output: ./{OUTPUT_DIR}/\n")
+    print(f"📁  Output: {out_dir}\n")
 
     for sentence in sentences:
-        generate_mp3(sentence)
+        generate_mp3(sentence, out_dir)
 
     print("\nDone! 🚀")

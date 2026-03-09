@@ -15,12 +15,13 @@ The cards work with sentences and context — not just isolated words.
 
 ```
 FlashcardsLearnGermanKids/
-├── pictures/           ← card images (PNG/JPG)
-├── audio/              ← audio files (EN + DE)
+├── pictures/           ← card images (organized in subfolders per deck)
+├── audio/              ← audio files (organized in subfolders: en/deck_name, de/deck_name)
 ├── flashcards/         ← .md files with cards
-├── generate_audio_en.py ← generate English audio (front side)
-├── generate_audio_de.py   ← generate German audio (back side)
-├── instructions.md     ← this file
+├── .agent/             ← AI tools directory
+│   ├── generate_audio_en.py ← generate English audio
+│   ├── generate_audio_de.py ← generate German audio
+│   └── instructions.md      ← this file
 ```
 
 ---
@@ -42,10 +43,10 @@ Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené
 - The sentence is **in English** — the key word is the English word, **NOT the German word**
 - **Highlight the key English word in red** `#e53935`: `<span style="color:#e53935">neck</span>`
 - **English audio** of the sentence — generated with `generate_audio_en.py`
-  - `python3 generate_audio_en.py "Dino has a long neck."`
-  - Saved in `audio/` folder
+  - `python3 .agent/generate_audio_en.py --deck NAME_OF_DECK "Dino has a long neck."`
+  - Saved in `audio/en/NAME_OF_DECK/` folder
 - **Picture** in Pixar / cartoon style — colourful, action-oriented, clear
-  - Save in `pictures/`
+  - Save in `pictures/NAME_OF_DECK/`
   - Filename: `word_YYYYMMDD.png` — e.g. `kopf_20260225.png`
   - Embed using Obsidian syntax **without path**: `![[kopf_20260225.png]]`
 
@@ -55,11 +56,11 @@ Kartičky na učenie nemeckých slov v kontexte viet. Každé slovo je zasadené
 - **Nemecká veta** — preklad celej vety z prednej strany (kurzívou)
   - Nové nemecké slovo zvýrazniť červenou `#e53935`: `<span style="color:#e53935">Kopf</span>`
 - **Audio výslovnosť celej nemeckej vety** (MP3) — vložiť pomocou `![[slovo_timestamp.mp3]]`
-  - Generovať pomocou inline Python skriptu (nie `generate_audio_de.py`, ten je len pre slová):
+  - Generovať pomocou inline Python skriptu:
     ```bash
-    python3 -c "from gtts import gTTS; import os; from datetime import datetime; ts=datetime.now().strftime('%Y%m%d%H%M%S'); tts=gTTS('VETA_PO_NEMECKY', lang='de'); tts.save(f'audio/slovo_{ts}.mp3'); print(f'audio/slovo_{ts}.mp3')"
+    python3 -c "from gtts import gTTS; import os; from datetime import datetime; ts=datetime.now().strftime('%Y%m%d%H%M%S'); out='audio/de/NAME_OF_DECK'; os.makedirs(out, exist_ok=True); tts=gTTS('VETA_PO_NEMECKY', lang='de'); tts.save(f'{out}/slovo_{ts}.mp3'); print(f'{out}/slovo_{ts}.mp3')"
     ```
-  - Uložiť do priečinka `audio/`
+  - Uložiť do priečinka `audio/de/NAME_OF_DECK/`
 
 #### ▶ Farebné schéma — prehľad
 
@@ -161,12 +162,12 @@ Svetlo cestuje rýchlosťou 300 000 km/s. Vzdialenosť Zem–Slnko je asi 150 mi
 ### German vocabulary card (Type 1)
 1. **Choose a word** (e.g. `der Hund`)
 2. **Write an English sentence** with the key word — short and fun
-3. **Generate English audio**: `python3 generate_audio_en.py "The dog has a big nose."`
+3. **Generate English audio**: `python3 .agent/generate_audio_en.py --deck deck_name "The dog has a big nose."`
 4. **Generate image** — cartoon/Pixar style, illustrating the word or sentence
-5. **Save image** in `pictures/`
+5. **Save image** in `pictures/deck_name/`
 6. **Split the German word into syllables** and assign colours (1st blue, 2nd red, ...)
 7. **Translate sentence into German**
-8. **Generate German audio**: `python3 generate_audio_de.py "der Hund"`
+8. **Generate German audio**: `python3 .agent/generate_audio_de.py --deck deck_name "der Hund"`
 9. **Create the card** using the Type 1 template
 
 ### Otázka & Vysvetlenie (Typ 2)

@@ -103,11 +103,13 @@ Full card format and details are in [`.agent/instructions.md`](.agent/instructio
 ```
 AI-Language-Flashcards/
 ├── flashcards/          ← Markdown flashcard sets
-├── audio/
-│   ├── en/              ← English prompt audio
-│   └── de/              ← German word & sentence audio
-├── pictures/            ← Card illustrations (512×512 PNG)
-└── .agent/              ← Instructions & audio generator scripts
+├── audio/               ← Audio files (organized by deck)
+│   ├── en/deck_name/    ← English prompt audio
+│   └── de/deck_name/    ← German word & sentence audio
+├── pictures/            ← Card illustrations (organized by deck)
+│   ├── cover.jpg        ← Repository cover image
+│   └── deck_name/       ← 512×512 PNGs for this deck
+└── .agent/              ← AI instructions & audio generator scripts
 ```
 
 ---
