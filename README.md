@@ -1,4 +1,4 @@
-# 🦕 AI-Language-Flashcards
+# AI-Language-Flashcards
 
 > **Obsidian flashcards for children learning German — powered by spaced repetition.**
 
@@ -10,7 +10,7 @@ A ready-to-use Obsidian vault with illustrated German vocabulary flashcards for 
 
 ---
 
-## 🖼️ Preview
+## Preview
 
 <p align="center">
   <img src="pictures/germanVocabulary_01_dino/flugsaurier_20260225.png" width="160" alt="Flugsaurier"/>
@@ -25,7 +25,7 @@ Each card shows a fun illustrated scene on the front with an English sentence an
 
 ---
 
-## 👧 Who is this for?
+## Who is this for?
 
 - Kids aged **7–11** who already know some German basics (simple words, alphabet)
 - Parents or teachers looking for a low-effort, high-quality daily practice routine
@@ -33,7 +33,7 @@ Each card shows a fun illustrated scene on the front with an English sentence an
 
 ---
 
-## 📦 What's included
+## What's included
 
 | Set | Topic | Cards |
 |-----|-------|-------|
@@ -49,7 +49,7 @@ Every card includes:
 
 ---
 
-## 🚀 Getting started
+## Getting started
 
 ### 1. Download the vault
 
@@ -75,7 +75,7 @@ Or click **Code → Download ZIP** and unzip it.
 
 ---
 
-## ➕ Adding your own card sets
+## Adding your own card sets
 
 You can create new themed sets using an **AI coding agent** — tools like [Antigravity](https://antigravity.ai), GitHub Copilot (in agent mode), or Cursor work great.
 
@@ -93,12 +93,12 @@ The agent will:
 
 Full card format and details are in [`.agent/instructions.md`](.agent/instructions.md).
 
-> **💡 Not just English → German!**
+> **Not just English → German!**
 > The AI-driven workflow adapts to any language pair. You can just as easily create English → French, English → Spanish, or Slovak → German sets (the original version of this vault was Slovak → German, created for my own kids). Just tell the agent which languages to use — it will handle translations, audio generation, and card formatting accordingly. This is the real power of having AI behind the creation process.
 
 ---
 
-## 📁 Repository structure
+## Repository structure
 
 ```
 AI-Language-Flashcards/
@@ -114,6 +114,6 @@ AI-Language-Flashcards/
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
