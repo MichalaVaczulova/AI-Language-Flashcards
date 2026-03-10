@@ -39,7 +39,7 @@ Each card shows a fun illustrated scene on the front with an English sentence an
 |-----|-------|-------|
 | `germanVocabulary_01_dino.md` | Dinosaurs 🦕 | 16 |
 | `germanVocabulary_02_treehouse.md` | Building a treehouse 🌳 | 20 |
-| `germanVocabulary_03_police.md` | Police & Traffic 🚔 | 16 |
+| `germanVocabulary_03_police.md` | Police & Traffic 🚔 | 20 |
 
 Every card includes:
 - 🔊 English prompt sentence with audio (front)
