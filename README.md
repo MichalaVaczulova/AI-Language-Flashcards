@@ -13,12 +13,12 @@ A ready-to-use Obsidian vault with illustrated German vocabulary flashcards for 
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="pictures/flugsaurier_20260225.png" width="160" alt="Flugsaurier"/>
-  <img src="pictures/krokodil_20260225.png" width="160" alt="Krokodil"/>
-  <img src="pictures/piraten_20260226.png" width="160" alt="Piraten"/>
-  <img src="pictures/hammer_20260226.png" width="160" alt="Hammer"/>
-  <img src="pictures/polizeimotorrad_20260307.png" width="160" alt="Polizeimotorrad"/>
-  <img src="pictures/strafe_20260307.png" width="160" alt="Strafe"/>
+  <img src="pictures/germanVocabulary_01_dino/flugsaurier_20260225.png" width="160" alt="Flugsaurier"/>
+  <img src="pictures/germanVocabulary_01_dino/krokodil_20260225.png" width="160" alt="Krokodil"/>
+  <img src="pictures/germanVocabulary_02_treehouse/piraten_20260226.png" width="160" alt="Piraten"/>
+  <img src="pictures/germanVocabulary_02_treehouse/hammer_20260226.png" width="160" alt="Hammer"/>
+  <img src="pictures/germanVocabulary_03_police/polizeimotorrad_20260307.png" width="160" alt="Polizeimotorrad"/>
+  <img src="pictures/germanVocabulary_03_police/strafe_20260307.png" width="160" alt="Strafe"/>
 </p>
 
 Each card shows a fun illustrated scene on the front with an English sentence and audio. Flip it over to see the German word — colour-coded by syllable — plus a full German sentence with pronunciation audio.
@@ -111,15 +111,6 @@ AI-Language-Flashcards/
 │   └── deck_name/       ← 512×512 PNGs for this deck
 └── .agent/              ← AI instructions & audio generator scripts
 ```
-
----
-
-## 👤 Author
-
-| | |
-|---|---|
-| **Name** | Michala Vaczulova |
-| **Contact** | https://www.linkedin.com/in/michala-vaczulová-823981258 |
 
 ---
 
