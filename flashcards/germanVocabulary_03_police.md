@@ -143,3 +143,39 @@
 ## *Ich überhole das Auto auf meinem <span style="color:#e53935">Polizeimotorrad</span>.*
 ![[ich_ueberhole_das_auto_auf_meinem_polizeimotorrad._20260307182511.mp3]]
 ![[das_polizeimotorrad_20260307182511.mp3]]
+***
+## The police <span style="color:#e53935">siren</span> is very loud!
+![[the_police_siren_is_very_loud_20260310085922.mp3]]
+![[sirene_20260310.png]]
+?
+**die**
+# <span style="color:#1a73e8">SI</span><span style="color:#e53935">RE</span><span style="color:#1a73e8">NE</span>
+## *Die <span style="color:#e53935">Sirene</span> der Polizei ist sehr, sehr laut!*
+![[sirene_satz_20260310085957.mp3]]
+***
+## We are stuck in a <span style="color:#e53935">traffic jam</span> — no one can move!
+![[we_are_stuck_in_a_traffic_jam_20260310085924.mp3]]
+![[stau_20260310.png]]
+?
+**der**
+# <span style="color:#1a73e8">STAU</span>
+## *Wir stecken im <span style="color:#e53935">Stau</span> — niemand kann fahren!*
+![[stau_satz_20260310085959.mp3]]
+***
+## The police officer puts <span style="color:#e53935">handcuffs</span> on the thief.
+![[the_police_officer_puts_handcuffs_on_the_thief_20260310085927.mp3]]
+![[handschellen_20260310.png]]
+?
+**die**
+# <span style="color:#1a73e8">HAND</span><span style="color:#e53935">SCHEL</span><span style="color:#1a73e8">LEN</span>
+## *Der Polizist legt dem Dieb die <span style="color:#e53935">Handschellen</span> an.*
+![[handschellen_satz_20260310090002.mp3]]
+***
+## The <span style="color:#e53935">radar trap</span> caught the fast red car!
+![[the_radar_trap_caught_the_fast_red_car_20260310085929.mp3]]
+![[radarfalle_20260310.png]]
+?
+**die**
+# <span style="color:#1a73e8">RA</span><span style="color:#e53935">DAR</span><span style="color:#1a73e8">FAL</span><span style="color:#e53935">LE</span>
+## *Die <span style="color:#e53935">Radarfalle</span> hat das schnelle rote Auto erwischt!*
+![[radarfalle_satz_20260310090004.mp3]]
